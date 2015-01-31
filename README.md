@@ -5,7 +5,7 @@ npm install -g jspm live-server
 jspm install
 live-server
 ```
-go to http://localhost:8080/build.html
+go to http://localhost:8080/index.html
 
 To build:
 
