@@ -1,0 +1,9 @@
+{
+  "jspm": {
+    "dependencies": {
+      "jsonp": "npm:jsonp@^0.1.0",
+      "jsx": "^0.1.1",
+      "react": "npm:react@0.13.0-beta.1"
+    }
+  }
+}
