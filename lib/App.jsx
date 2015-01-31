@@ -5,16 +5,12 @@ import List from './List.jsx!';
 class App extends React.Component {
   constructor() {
     this.state = {items: [],searchString: ''};
+    this.handleFilter = (e) => this.setState({searchString: e.target.value});
   }
-
 
   componentWillMount(){
     /* no rejection handling here. tsk, tsk. */
     Api.load().then(data => this.setState({items: data.sort((a,b) => a.name < b.name ? -1: 1)}))
-  }
-
-  handleFilter(e){
-    this.setState({searchString: e.target.value});
   }
 
   render(){
