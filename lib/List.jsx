@@ -1,13 +1,12 @@
 import React from 'react';
 
-class List extends React.Component {
-  render(){
-    return (
+
+const List = (props) => {
+  return (
       <ul>
-        {this.props.items.map((item, i) => <li key={i}>{item.name}</li> ) }
+        {props.items.map((item, i) => <li key={i}>{item.name}</li> ) }
       </ul>
     );
-  }
 }
 
 export default List

@@ -4,6 +4,7 @@ import List from './List.jsx!';
 
 class App extends React.Component {
   constructor() {
+    super();
     this.state = {items: [],searchString: ''};
     this.handleFilter = (e) => this.setState({searchString: e.target.value});
   }
@@ -14,8 +15,8 @@ class App extends React.Component {
   }
 
   render(){
-    var items = this.state.items;
-    var searchString = this.state.searchString.toLowerCase().trim();
+    let items = this.state.items;
+    let searchString = this.state.searchString.toLowerCase().trim();
 
     if(searchString.length){
       items = items.filter(item => item.name.toLowerCase().match(searchString));
